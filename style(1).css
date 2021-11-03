@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: basic-sans, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 1.6;
+  color: #333;
+
+  background: #ddd;
+  background-size: 400%;
+  background-image: linear-gradient(45deg, #2ee0ec, white, rgb(0, 150, 236));
+  animation: bg-animation 25s infinite;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-style: italic;
+
+  color: rgb(0, 150, 236);
+  background-color: white;
+  width: 100%;
+  height: 500px;
+
+  justify-content: center;
+  font-family: "Rampart One", cursive;
+  background-size: 300%;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+}
+.box {
+  width: 600px;
+  height: 200px;
+  background-image: url(./num.jpg);
+  background-color: white;
+  flex-direction: column;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 150px;
+  padding-right: 600px;
+}
+
+.box img {
+  margin-top: -100px;
+  margin-left: 1300px;
+  align-items: center;
+  justify-content: center;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -40px;
+}
+
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 3rem;
+  width: 270px;
+  text-align: center;
+  margin-left: 1290px;
+  font-weight: 1px;
+  line-height: 25px;
+}
+
+.input {
+  width: 300px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  border: 1px solid #00000073;
+  padding-left: 35px;
+  margin-top: 40px;
+  margin-left: 1290px;
+  padding: 30px;
+}
+form {
+  flex-direction: column;
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
+  font-size: 1rem;
+  border-radius: 20px;
+  align-items: center;
+  margin-left: 150px;
+  margin-top: 20px;
+  margin-right: 130px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-image: linear-gradient(to right, yellow, red);
+  margin-left: 1430px;
+  color: gray;
+  transition: background-image 1s;
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 1s;
+}
+.btn:hover,
+.btn:focus {
+  background-position: right;
+  background-image: linear-gradient(orange, yellow);
+}
+.btn1 {
+  width: 200px;
+  height: 50px;
+  font-size: 1rem;
+  border-radius: 20px;
+  align-items: center;
+  margin-top: 150px;
+  margin-right: 250px;
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-image: linear-gradient(to right, yellow, red);
+  color: gray;
+  transition: background-image 1s;
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 1s;
+}
+.btn1:hover,
+.btn1:focus {
+  background-position: right;
+  background-image: linear-gradient(orange, yellow);
+}
+.prompt_box {
+  display: none;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -30%);
+  font-family: "Open Sans", sans-serif;
+  width: 600px;
+  height: 420px;
+  margin-top: -40px;
+  border-radius: 40px;
+}
+.prompt_box h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+  align-items: center;
+  margin-top: 50px;
+  margin-right: 60px;
+  color: red;
+}
+.prompt_box.active {
+  display: flex;
+}
